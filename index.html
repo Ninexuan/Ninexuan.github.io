@@ -25,7 +25,7 @@
   <style type="text/css">
   
     #container.show {
-      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+      background: linear-gradient(200deg,#b4d8d8,#66c3d5);
     }
   </style>
   
@@ -39,11 +39,11 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/images/head.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/"></a></h1>
@@ -89,9 +89,25 @@
 		        
 			</div>
 		
-		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=228 height=86 src="//music.163.com/outchain/player?type=2&id=1471724841&auto=1&height=66"></iframe>
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=228 height=86 src="//music.163.com/outchain/player?type=2&id=350909&auto=1&height=66"></iframe>
 		
 		</nav>
+    <script >
+        var bglist = [];
+        bglist[0] = "/images/p1.jpg";
+        bglist[1] = "/images/p2.jpg";
+        bglist[2] = "/images/p3.jpg";
+        bglist[3] = "/images/p4.jpg";
+        setInterval('Getbg();', 3000);   //切换时间间隔，单位毫秒
+        function Getbg(){
+                    var bgindex = Math.round(Math.random()*2);
+                    //输出随机背景
+                    var bkg = document.getElementsByClassName("left-col")[0];  
+                    //这句话意思是找名字是left-col的class元素，找id可以用getElementById()
+                    bkg.style.backgroundImage="url("+ bglist[bgindex] +")";
+    }
+    </script>
+
 	</header>		
 </div>
 
@@ -106,7 +122,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/images/head.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author"></h1>
@@ -172,6 +188,7 @@
 
         
         <a href="/2021/04/16/wodediyipianblog/" class="archive-article-date">
+	<span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span>
   	<time datetime="2021-04-16T10:09:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-16</time>
 </a>
         
@@ -234,6 +251,7 @@
 
         
         <a href="/2021/04/16/hello-world/" class="archive-article-date">
+	<span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span>
   	<time datetime="2021-04-16T10:04:19.996Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-16</time>
 </a>
         
@@ -304,6 +322,16 @@
       </div>
       <footer id="footer">
   <div class="outer">
+   # 总访问量
+<span id="busuanzi_container_site_pv">    
+    本站总访问量
+    <span id="busuanzi_value_site_pv"></span>次</span> |
+
+# 访客记录
+<span id="busuanzi_container_site_uv">  
+    本站访客数
+    <span id="busuanzi_value_site_uv"></span>人次</span>
+
     <div id="footer-info">
     	<div class="footer-left">
     		&copy; 2021 John Doe
